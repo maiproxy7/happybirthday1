@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday, Chotiii!</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 id="greeting"></h1>
+        <p class="message">Wishing you a day filled with love, laughter, and unforgettable memories!</p>
+        
+        <div id="quotes" class="quotes">
+            <p>"UR the most imp part of my life "</p>
+            <p>"Having a sister like u is like having a part time mamma in my Life"</p>
+            
+        </div>
+        
+        <div class="gallery">
+            <img src="gallery1.jpg" alt="Memory 1" class="gallery-image">
+            <img src="gallery2.jpg" alt="Memory 2" class="gallery-image">
+            <img src="gallery3.jpg" alt="Memory 3" class="gallery-image">
+            <img src="gallery4.jpg" alt="Memory 4" class="gallery-image">
+            <img src="gallery5.jpg" alt="Memory 5" class="gallery-image">
+            <img src="gallery6.jpg" alt="Memory 6" class="gallery-image">
+            <img src="gallery7.jpg" alt="Memory 7" class="gallery-image">
+            <img src="gallery8.jpg" alt="Memory 8" class="gallery-image">
+</div>
+        
+<div id="cake-container">
+    <img id="cake" src="cake.jpg" alt="Cake">
+</div>
+
+        
+
+
+        <div id="countdown">
+            <p class="timer-text">Time left for ur special day:</p>
+            <span id="timer"></span>
+        </div>
+
+        <div class="button-container">
+            <button onclick="showSurprise()">Click for a message!</button>
+        </div>
+
+        <div class="music-controls">
+            <button id="musicButton" onclick="toggleMusic()">🎶 play Music</button>
+        </div>
+    </div>
+
+    <!-- Confetti Animation -->
+    <canvas id="confetti"></canvas>
+
+    <!-- Background music -->
+    <audio id="music" loop>
+        <source src="birthday_music.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>

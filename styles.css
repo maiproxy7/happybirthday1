@@ -1,0 +1,163 @@
+body {
+    margin: 0;
+    font-family: 'Pacifico', cursive;
+    background: url('birthday_theme_background.jpg') center/cover no-repeat, linear-gradient(to right, #ff9a9e, #fad0c4);
+    color: #fff;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.container {
+    padding: 30px;
+    max-width: 1200px;
+    margin: 100px auto;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 2s ease-in;
+}
+
+h1 {
+    font-size: 3rem;
+    margin: 20px 0;
+    animation: bounce 2s infinite;
+}
+
+.message {
+    font-size: 1.5rem;
+    margin: 20px 0;
+}
+
+.quotes {
+    font-size: 1.2rem;
+    color: #f8f8f8;
+    margin: 20px 0;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap; /* Allows the images to wrap into new lines */
+    justify-content: center; /* Centers the images within each row */
+    gap: 20px; /* Adds space between the images */
+    margin: 25px 0;
+}
+
+.gallery-image {
+    width: calc(33.33% - 25px); /* Ensures 3 images fit per row, accounting for the gap */
+    max-width: 220px; /* Limits the maximum width */
+    border-radius: 15px;
+    transition: transform 0.2s ease-in-out;
+    box-sizing: border-box; /* Includes padding and border in the width calculation */
+}
+
+.gallery-image:hover {
+    transform: scale(1.1);
+}
+
+#cake-class {
+    display: flex;
+    justify-content: center; /* Center aligns the cake image */
+    margin: 20px 0;
+}
+
+#cake {
+    width: 100%;
+    max-width: 200px; /* Matches the max-width of .gallery-image */
+    border-radius: 10px; /* Matches the border-radius of .gallery-image */
+    transition: transform 0.3s ease-in-out; /* Matches hover effect */
+}
+
+#cake:hover {
+    transform: scale(1.1); /* Matches hover scale */
+}
+
+
+
+
+#cakeMessage {
+    font-size: 3 rem;
+    margin-top: 20px;
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    color: #fff;
+    background: linear-gradient(45deg, #ff6f61, #ff9a9e);
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+    background: linear-gradient(45deg, #ff5c50, #ff8a8e);
+}
+
+.music-controls {
+    margin-top: 20px;
+}
+
+.music-controls button {
+    background-color: #ff6f61;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.music-controls button:hover {
+    background-color: #e55c50;
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 600px) {
+    .gallery-image {
+        width: calc(50% - 20px); /* 2 images per row */
+    }
+}
+
+@media (max-width: 400px) {
+    .gallery-image {
+        width: calc(100% - 20px); /* 1 image per row */
+    }
+}
